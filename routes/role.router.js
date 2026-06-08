@@ -11,6 +11,7 @@ import { authorizeUser } from "../middleware/authorizeUser.js";
 
 const router = express.Router();
 
+// router.route("/createRole").post(createRole);
 router.route("/createRole").post(verifyToken,authorizeUser('Admin'),createRole);
 // router.route("/getAllRoles").get(verifyToken, authorizeUser('Admin','Manager'),getAllRoles);
 router.route("/getAllRoles").get(getAllRoles);

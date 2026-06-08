@@ -7,6 +7,9 @@ import userRouter from "./routes/user.route.js";
 import bookRouter from "./routes/book.router.js";
 import cors from "cors";
 
+import dns from 'node:dns';
+dns.setServers(['1.1.1.1', '1.0.0.1']);
+
 const app = express();
 env.config();
 
